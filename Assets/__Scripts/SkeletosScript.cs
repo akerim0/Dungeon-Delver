@@ -39,8 +39,11 @@ public class SkeletosScript : EnemiesScript,IFacingMover
         inRoomScript = GetComponent<InRoomScript>();
     }
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
+        base.Update();
+        if(knockback) return;
+
         if(Time.time > timeNextDecision)
         {
             DecideDirection();

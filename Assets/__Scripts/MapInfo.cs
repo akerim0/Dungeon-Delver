@@ -44,6 +44,7 @@ public class MapInfo : MonoBehaviour
                 }
             }
         }
+        TileSwapManager.SwapTiles(Map);
         Debug.Log("Map Size: " + W + " wide by " + H + " high");
     }
     public static BoundsInt Get_Map_Bounds()
